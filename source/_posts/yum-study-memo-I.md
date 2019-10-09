@@ -19,7 +19,7 @@ tags:
 
 ## What is yum
 
-### *A package repository used by yum is simply a directory with one or more RPMs plus some "meta information" used by yum to be able to easily access information (dependencies, file lists, etc.) for the RPMs. yum can then to access this directory over ftp/http or a file URI (including over NFS).*（使用yum的包倉庫只是簡單的目錄帶有多個RPMs plus標有meta information來使得yum可以簡單地訪問依賴，文件列表等RPMs的信息，並且支持訪問ftp/http和文件url甚至NFS）
+***A package repository used by yum is simply a directory with one or more RPMs plus some "meta information" used by yum to be able to easily access information (dependencies, file lists, etc.) for the RPMs. yum can then to access this directory over ftp/http or a file URI (including over NFS).***（使用yum的包倉庫只是簡單的目錄帶有多個RPMs plus標有meta information來使得yum可以簡單地訪問依賴，文件列表等RPMs的信息，並且支持訪問ftp/http和文件url甚至NFS）
 
 ## Steps
 
@@ -31,19 +31,19 @@ tags:
   # yum install createrepo
   ```
 
-  ### *If you are generating your repository on a machine that doesn't use RPMs, you can download createrepo from http://createrepo.baseurl.org/ and build/install it manually.*（甚至支持非RPMs的管理。）
+  ***If you are generating your repository on a machine that doesn't use RPMs, you can download createrepo from http://createrepo.baseurl.org/ and build/install it manually.***（甚至支持非RPMs的管理。）
 
-  ### *Once you have createrepo installed you need to run it. It only requires one argument which is the directory in which you would like to generate the repository data. So if the packages directory we made in step 1 is in /srv/my/repo then you would run:*（如果已經安裝ok則直接用以下命令生成repodata。）
+  ***Once you have createrepo installed you need to run it. It only requires one argument which is the directory in which you would like to generate the repository data. So if the packages directory we made in step 1 is in /srv/my/repo then you would run:***（如果已經安裝ok則直接用以下命令生成repodata。）
 
   ```nohighlight
   # createrepo /srv/my/repo
   ```
 
-  ### You should see a lot of things fly by but it should finish without an error. In the end you should have a directory named /srv/my/repo/repodata with at least 4 files in it. Maybe more.(至少四個文件生成。)
+  ***You should see a lot of things fly by but it should finish without an error. In the end you should have a directory named /srv/my/repo/repodata with at least 4 files in it. Maybe more.***(至少四個文件生成。)
 
 - ### *3. To make this repository known to yum you need to add a .repo file to your yum configuration. On the systems where you want to use this repo you need to make a new file in /etc/yum.repos.d/. The file can be named anything but the extension on the file has to be .repo. Let's call this one 'myrepo.repo'.*（需要新建.repo後綴文件。）
 
-  ### *In the file you just need to include the following:*（僅需包括以下內容。）
+  ***In the file you just need to include the following:***（僅需包括以下內容。）
 
   ```nohighlight
   [myrepo]
@@ -51,19 +51,19 @@ tags:
   baseurl = url://to/get/to/srv/my/repo/
   ```
 
-  ### *That's all you need in that file. The 'baseurl' line is the path that machine uses to get to the repository. If the machine has direct access to it or mounts it as a filesystem you can use a baseurl line like:*（僅需修改baseurl為你倉庫的路徑。）
+  ***That's all you need in that file. The 'baseurl' line is the path that machine uses to get to the repository. If the machine has direct access to it or mounts it as a filesystem you can use a baseurl line like:***（僅需修改baseurl為你倉庫的路徑。）
 
   ```nohighlight
   baseurl = file:///srv/my/repo/
   ```
 
-  ### *If you access the file via an http or https server you would use something like:*（http/https如下。）
+  ***If you access the file via an http or https server you would use something like:***（http/https如下。）
 
   ```nohighlight
   baseurl = http://servername/my/repo
   ```
 
-  ### *More details about client-side repo configuration can be found in the yum.conf man page.*	（更多詳情yum.conf。）
+  ***More details about client-side repo configuration can be found in the yum.conf man page.***	（更多詳情yum.conf。）
 
 - ### *4. Now, every time you modify, remove or add a new RPM package to /srv/my/repo you need to recreate the repository metadata. You do that by running createrepo the same way you did in step 2.* （有任何修改、移除或新增RPM包都要recreate如同第二步一樣。）
 
