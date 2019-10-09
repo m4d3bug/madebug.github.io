@@ -1,6 +1,9 @@
 ---
-title: Yum Memo I
+title: Yum Study Memo I
 date: 2019-09-14 12:21:48
+mathjax: true
+copyright: true
+comment: true
 categories:
 - "Ops "
 tags:
