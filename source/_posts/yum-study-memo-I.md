@@ -15,7 +15,7 @@ tags:
 
 ## 1. [RepoCreate](http://yum.baseurl.org/wiki/RepoCreate.html) -- How to setup your own repositories
 
-** *Sometimes you'll find you need to be able to collect a bunch of rpm packages you have together in one place and you want to make them available to your systems running yum. It is pretty easy to do.* **
+***Sometimes you'll find you need to be able to collect a bunch of rpm packages you have together in one place and you want to make them available to your systems running yum. It is pretty easy to do.***
 
 ## What is yum
 
