@@ -83,7 +83,7 @@ pxelinux  usr
 [root@localhost tftpboot]# more /var/lib/tftpboot/uefi/grub.cfg
 set timeout=60
   menuentry 'RHEL 7' {
-  linuxefi uefi/vmlinuz ip=dhcp inst.repo=http://192.168.188.174/RHEL-7/7.4/Server/x86_64
+  linuxefi uefi/vmlinuz ip=dhcp inst.repo=http://192.168.188.174/RHEL-7/7.4/Server/x86_64 inst.gpt
   initrdefi uefi/initrd.img
 }
 [root@localhost tftpboot]# cp /var/lib/tftpboot/pxelinux/{vmlinuz,initrd.img} /var/lib/tftpboot/uefi/
@@ -117,7 +117,7 @@ set timeout=60
 
 ![UEFIboot.png](https://i.loli.net/2019/09/14/1O5BijJv9dlQpTa.png)
 
-## Configure Network Install*
+## *Configure Network Install*
 
 ### *Monitor httpd*
 
@@ -148,7 +148,7 @@ set timeout=60
 
 ![](https://i.loli.net/2019/08/18/NiJG2l7BSgHyvWe.png)
 
-![](https://i.loli.net/2019/08/18/Ukyx7uJDowYIAVQ.png)
+![](https://i.loli.net/2019/10/08/BzDQKP1vZGds5W3.png)
 
 ![](https://i.loli.net/2019/08/18/K1WNP4OGlFILhCS.png)
 
@@ -165,7 +165,7 @@ set timeout=60
 ### *Configure packages I need*
 
 ```nohighlight
-[root@localhost ~]# cat ~/anaconda-ks.cfg |grep -A 19 %packages >> /var/www/html/ks/mbr-ks.cfg
+[root@localhost ~]# cat ~/anaconda-ks.cfg |grep -A 19 %packages >> /var/www/html/ks/uefi-ks.cfg
 %packages
 @^graphical-server-environment
 @base
@@ -191,33 +191,97 @@ kexec-tools
 ### *Configure disk*
 
 ``` nohighlight
-[root@localhost ~]# sed -i '/bootloader --location=mbr/a autopart --type=lvm' /var/www/html/ks/mbr-ks.cfg
+[root@localhost ~]# sed -i '/bootloader --location=mbr/a autopart --type=lvm' /var/www/html/ks/uefi-ks.cfg
+[root@localhost ~]# cat /var/www/html/ks/uefi-ks.cfg
+#version=DEVEL
+# System authorization information
+auth --enableshadow --passalgo=sha512
+# Use network installation
+url --url="http://192.168.188.174/RHEL-7/7.4/Server/x86_64/"
+#repo --name="Server-ResilientStorage" --baseurl=http://10.66.192.123/rhel7u5//addons/ResilientStorage
+# Use graphical install
+#graphical
+text
+# Run the Setup Agent on first boot
+firstboot --enable
+ignoredisk --only-use=sda
+# Keyboard layouts
+keyboard --vckeymap=us --xlayouts='us'
+# System language
+lang en_US.UTF-8
+# Network information
+#network  --bootproto=dhcp --device=eth0 --ipv6=auto --activate
+network --onboot yes --device eth0 --bootproto dhcp --noipv6
+network  --hostname=localhost.localdomain
+# Root password
+rootpw --iscrypted $1$n5NVIcJj$honUQjAMpqWcJcTk5MdPq/
+# System services
+services --enabled="chronyd"
+# System timezone
+timezone Asia/Shanghai --isUtc
+# System bootloader configuration
+bootloader --append=" crashkernel=128M" --location=mbr --boot-drive=sda
+# Partition clearing information
+#zerombr
+clearpart --all --initlabel
+# Disk partitioning information
+#%pre --log=/root/pre_log
+
+#/usr/bin/dd bs=512 count=10 if=/dev/zero of=/dev/sda
+#/usr/sbin/parted --script /dev/sda mklabel gpt
+#/usr/sbin/parted --script /dev/sda print 
+#/usr/bin/sleep  30
+
+#%end
+
+part pv.146 --fstype="lvmpv" --ondisk=sda --size=10000
+part /boot/efi --fstype=efi --size=1024 --ondisk=sda
+part /boot --fstype="xfs" --ondisk=sda --size=1024
+volgroup rhel00 pv.146
+logvol /  --fstype="xfs" --name=root --vgname=rhel00 --percent=100
+#logvol /var/log  --fstype="xfs" --grow --name=log --vgname=rhel00 --percent=50
+#logvol swap  --fstype="swap" --size=2047 --name=swap --vgname=rhel00
+
+%packages
+@^graphical-server-environment
+@base
+@^minimal
+@core
+@desktop-debugging
+@dial-up
+@fonts
+@gnome-desktop
+@guest-agents
+@guest-desktop-agents
+@hardware-monitoring
+@input-methods
+@internet-browser
+@multimedia
+@print-client
+@x11
+chrony
+kexec-tools
+%end
+%addon com_redhat_kdump --enable --reserve-mb='128M'
+%end
+%anaconda
+pwpolicy root --minlen=6 --minquality=1 --notstrict --nochanges --notempty
+pwpolicy user --minlen=6 --minquality=1 --notstrict --nochanges --emptyok
+pwpolicy luks --minlen=6 --minquality=1 --notstrict --nochanges --notempty
+%end
+
+
 ```
 
 ### *Edit the boot menu*
 
 ```nohighlight
-[root@localhost ~]# more /var/lib/tftpboot/pxelinux/pxelinux.cfg/default 
-default vesamenu.c32
-prompt 1
-timeout 100
-
-label linux
-  menu label ^Install system
-  menu default
-  kernel vmlinuz
-  append initrd=initrd.img ip=dhcp inst.repo=http://192.168.188.174/RHEL-7/7.4/Server/x86_64/ inst.ks=http://192.168.188.174/ks/mbr-ks.cfg
-label vesa
-  menu label Install system with ^basic video driver
-  kernel vmlinuz
-  append initrd=initrd.img ip=dhcp inst.xdriver=vesa nomodeset inst.repo=http://192.168.188.174/RHEL-7/7.4/Server/x86_64/
-label rescue
-  menu label ^Rescue installed system
-  kernel vmlinuz
-  append initrd=initrd.img rescue
-label local
-  menu label Boot from ^local drive
-  localboot 0xffff
+[root@localhost ~]# more /var/lib/tftpboot/uefi/grub.cfg  
+set timeout=3
+  menuentry 'RHEL 7' {
+  linuxefi uefi/vmlinuz ip=dhcp inst.repo=http://192.168.188.174/RHEL-7/7.4/Server/x86_64 inst.ks=http://192.168.188.174/ks/uefi-ks.cfg inst.gpt
+  initrdefi uefi/initrd.img
+}
 ```
 
 *Start the vm machine which is enabled network booting on BIOS settings, then PXE boot menu is shown. After 10 seconds later, installation process starts and will finish and reboot automatically.*
