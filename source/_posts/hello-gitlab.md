@@ -77,9 +77,7 @@ INFO  Start blogging with Hexo!
 
 *Please fill up your repository name such as: [ custom name ]+gitlab.io.*
 
-![](https://i.loli.net/2019/08/10/priZIByc4Tfks7S.png)
-
-![](https://i.loli.net/2019/08/10/ugAZDkTQHYIOCKV.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/ugAZDkTQHYIOCKV.png)
 
 ### *Create the local repository*
 
@@ -122,21 +120,21 @@ ssh-rsa AAAAB3NzaC1y.../iiF@@@@@@@@@@@@@@@@@@@@@== m4d3bug@ubuntu
 
 ### *Upload the public key*
 
-![](https://i.loli.net/2019/08/10/grnETp16mayWYlw.png)
+![](https://github.com/m4d3bug/images-of-website/blob/master/blog/grnETp16mayWYlw.png?raw=true)
 
 ### *Update the policy of yourself*
 
-![](https://i.loli.net/2019/08/12/9NeG8lWjYHadt4b.jpg)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/9NeG8lWjYHadt4b.jpg)
 
 ####  *Delete origin rule and setup like this.*
 
-![](https://i.loli.net/2019/08/28/jL7n1h3KBOywvZg.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master//blog/jL7n1h3KBOywvZg.png)
 
-![](https://i.loli.net/2019/08/10/UGSMXCbTFYlA1yh.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/UGSMXCbTFYlA1yh.png)
 
 ## *Start up the first commit*
 
-``` bash
+``` nohighlight
 ~/m4d3bug.gitlab.io# git checkout -b beta
 Switched to a new branch 'beta'
 ~/m4d3bug.gitlab.io# git config --global user.email "m4d3bug@gmail.com"
@@ -149,7 +147,7 @@ Switched to a new branch 'beta'
 
 *Now you can see that the remote repository has created a new branch called beta and includes the above files.*
 
-![](https://i.loli.net/2019/08/10/OvHGo1j3MutW7rR.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/OvHGo1j3MutW7rR.png)
 
 ## *Configure the pipeline*
 
@@ -197,7 +195,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 ### *Push the change to the remote repository*
 
-``` bash
+``` nohighlight
 ~/m4d3bug.gitlab.io# git add .
 ~/m4d3bug.gitlab.io# git commit -m "Init Commit"
 ~/m4d3bug.gitlab.io# git push --set-upstream origin beta
@@ -205,7 +203,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 ### *Confirm the pipelines is working*
 
-![](https://i.loli.net/2019/08/11/U9xHfalLTC3WpA1.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/U9xHfalLTC3WpA1.png)
 
 *After that, you can get the assigned domain name in Settings >> Pages .*
 
@@ -215,27 +213,27 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 ### *GitLab generates domain verification text*
 
-![](https://i.loli.net/2019/08/11/HykJnsKlj37FxYd.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012213613.png)
 
-![](https://i.loli.net/2019/08/11/Xz2fk1prdlESvis.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012213701.png)
 
 ### *Domain name resolution is set by cloudflare*
 
-![](https://i.loli.net/2019/08/11/IZ1jUJEakPe4dsf.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012213810.png)
 
 ### *Make sure the https working on custom domain*
 
-![](https://i.loli.net/2019/08/11/O12KTspUnuo4CFg.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012213854.png)
 
-![](https://i.loli.net/2019/08/11/piF2nILMlEKt9mw.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012213928.png)
 
 
 
 ## *Done*
 
-*Now the custom domain name and CI/CD are in effect, and a clean master branch is kept for rollback. When everything is good with the commit, you can choose merge beta to the master branch, by executing the following command.*
+*Now the custom domain name and CI/CD are in effect, and a clean master branch is kept for rollback. When everything is good with the commit, you can choose merge beta to the master branch for backup, by executing the following command.*
 
-``` bash
+``` nohighlight
 ~/m4d3bug.gitlab.io# git checkout master
 ~/m4d3bug.gitlab.io# git merge beta --allow-unrelated-histories
 ~/m4d3bug.gitlab.io# git add .
