@@ -207,7 +207,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 *After that, you can get the assigned domain name in Settings >> Pages .*
 
-![](https://i.loli.net/2019/08/11/KxRXZrL6ohaAVQG.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012224018.png)
 
 ## *Custom my own domain*
 
