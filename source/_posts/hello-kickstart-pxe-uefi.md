@@ -35,11 +35,11 @@ Removed symlink /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service.
 
 ### *Stop Virtual Network Editor's dhcp services*
 
-![](https://i.loli.net/2019/08/26/buNconEfrlS68J3.jpg)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012215006.png)
 
 ### *Configure custom ip*
 
-![](https://i.loli.net/2019/08/18/AkWE7qphu9iFcSI.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012215142.png)
 
 ## *Configure PXE Server*
 
@@ -156,9 +156,9 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/dhcpd.service t
 
 *The dhcpd working should get these:*
 
-![dhcplog.png](https://i.loli.net/2019/09/14/r62YRjlST4QObtg.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012215234.png)
 
-![dhcpok.png](https://i.loli.net/2019/09/14/aPyrBv4pixcd6mL.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012215745.png)
 
 ## *Configure Network Install*
 
@@ -189,11 +189,11 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service t
 
 ### *Create a  vm machines in the same LAN without iso.*
 
-![](https://i.loli.net/2019/08/19/w8lkvhm1aFeg5ur.jpg)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012215904.png)
 
 *Enable network boot on BIOS settings of client computer and start it, then installation menu is shown, push Enter key to proceed to install.*
 
-![ancanda.png](https://i.loli.net/2019/09/14/5iecmlxNtYS3jyk.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012215957.png)
 
 ## *Configure Kickstart Install*
 
@@ -205,21 +205,21 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service t
 
 ### *Custom your ks.cfg*
 
-[*Also can generate from here*] (https://access.redhat.com/labs/kickstartconfig/)
+*Also can generate from [here](https://access.redhat.com/labs/kickstartconfig/).*
 
-![](https://i.loli.net/2019/08/18/NiJG2l7BSgHyvWe.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012215958.png)
 
-![](https://i.loli.net/2019/10/08/BzDQKP1vZGds5W3.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012220306.png)
 
-![](https://i.loli.net/2019/08/18/K1WNP4OGlFILhCS.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012220309.png)
 
-![](https://i.loli.net/2019/08/18/GFX76hIsiwB9AzO.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012220708.png)
 
-![](https://i.loli.net/2019/08/18/VcaJwYrvNjkhDOF.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012221222.png)
 
-![](https://i.loli.net/2019/08/20/YzJ91PCfjvQFKs2.jpg)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012221519.png)
 
-![](https://i.loli.net/2019/08/18/8y5D3huAg2siJ6L.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012223309.png)
 
 ![mbr-ks.png](https://i.loli.net/2019/09/14/8aAY9sFUrqibzCp.png)
 
