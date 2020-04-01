@@ -20,5 +20,5 @@ pages:
         paths:
             - public
     only:
-#       - master
-        - beta
+       - master
+#        - beta
