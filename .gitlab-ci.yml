@@ -22,4 +22,4 @@ pages:
             - public
     only:
 #       - master
-        - beta
+       - beta
