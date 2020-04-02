@@ -209,10 +209,16 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service t
 
 ## *Configure Kickstart Config*
 
-### *Custom your ks.cfg*
+### *Create your ks dir*
 
 ```nohighlight
 ~]# mkdir /var/www/html/ks
+```
+
+### *Custom your ks.cfg for BIOS*
+
+```nohighlight
+
 ~]# cat >> /var/www/html/ks/bios-ks.cfg << EOF
 #platform=x86, AMD64, or Intel EM64T
 #version=DEVEL
@@ -286,6 +292,11 @@ pwpolicy user --minlen=6 --minquality=1 --notstrict --nochanges --emptyok
 pwpolicy luks --minlen=6 --minquality=1 --notstrict --nochanges --notempty
 %end
 EOF
+```
+
+### *Custom your ks.cfg for UEFI*
+
+```nohighlight
 ~]# cat >> /var/www/html/ks/uefi-ks.cfg << EOF
 #platform=x86, AMD64, or Intel EM64T
 #version=DEVEL
