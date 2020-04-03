@@ -182,13 +182,14 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/dhcpd.service t
 ``` nohighlight
 ~]# yum -y install httpd
 ~]# rm -f /etc/httpd/conf.d/welcome.conf
-~]# cat /etc/httpd/conf.d/iso.conf
+~]# cat >> /etc/httpd/conf.d/iso.conf << EOF
 # Create this
 Alias /RHEL-7/7.4/Server/x86_64 /mnt/RHEL-7/7.4
 <Directory /mnt/RHEL-7/7.4>
     Options Indexes FollowSymLinks
     Require ip 0.0.0.0
 </Directory>
+EOF
 ~]# systemctl enable httpd
 Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service to /usr/lib/systemd/system/httpd.service.
 ~]# systemctl start httpd 
