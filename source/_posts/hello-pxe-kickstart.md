@@ -18,7 +18,7 @@ tags:
 
 *In this post, I am going to markdown how to build a unattended PXE Server by using kickstart in BIOS and UEFI.*
 
-*And we need to run the service on the same machine: TFTP, DHCP & httpd.*
+*And we will run these services on the same machine with PXE: TFTP, DHCP & httpd.*
 
 ## *Environmental preparation*
 
@@ -224,7 +224,7 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service t
 #version=DEVEL
 # Install OS instead of upgrade
 install
-# Keyboard layouts
+# Keyboard layouts:
 keyboard 'us'
 # Root password
 rootpw --iscrypted $1$MHXtAAGd$k9MrCZ5lII6h9cqL1w15h/
