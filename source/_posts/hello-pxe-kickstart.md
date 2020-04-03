@@ -150,6 +150,21 @@ subnet 192.168.188.0 netmask 255.255.255.0 {
 ~]# systemctl start dhcpd 
 ~]# systemctl enable dhcpd 
 Created symlink from /etc/systemd/system/multi-user.target.wants/dhcpd.service to /usr/lib/systemd/system/dhcpd.service.
+~]# rm -rf /var/lib/tftpboot/usr
+~]# tree -L 3 /var/lib/tftpboot/
+/var/lib/tftpboot/
+├── grub.cfg                     <--- Config file for UEFI
+├── grubx64.efi                  <--- bootloader program for UEFI
+└── pxelinux
+    ├── initrd.img               <--- images for kernel in bootup progress
+    ├── pxelinux.0               <--- bootloader program for BIOS
+    ├── pxelinux.cfg             <--- default dir to store the config for pxelinux.0
+    │   └── default              <--- Config file for BIOS
+    ├── vesamenu.c32             <--- header file for default
+    └── vmlinuz                  <--- kernel in boot progress
+
+2 directories, 7 files
+
 ```
 
 ### *Check if DHCP works as expected:*
