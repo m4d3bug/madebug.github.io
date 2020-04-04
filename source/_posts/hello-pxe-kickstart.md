@@ -117,7 +117,7 @@ Created symlink from /etc/systemd/system/sockets.target.wants/tftp.socket to /us
 ## *Start DHCP server*
 
 ```nohighlight
-~]# cat /etc/dhcp/dhcpd.conf 
+~]# cat >> /etc/dhcp/dhcpd.conf << EOF
 # FILL THIS UP
 #
 # DHCP Server Configuration file.
@@ -146,7 +146,7 @@ subnet 192.168.188.0 netmask 255.255.255.0 {
       }
   }
 }
-
+EOF
 ~]# systemctl start dhcpd 
 ~]# systemctl enable dhcpd 
 Created symlink from /etc/systemd/system/multi-user.target.wants/dhcpd.service to /usr/lib/systemd/system/dhcpd.service.
