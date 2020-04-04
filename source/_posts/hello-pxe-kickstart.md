@@ -85,8 +85,8 @@ label local
   menu label Boot from ^local drive
   localboot 0xffff
 EOF
-~]# cp /mnt/images/pxeboot/{vmlinuz,initrd.img} /var/lib/tftpboot/pxelinux/
-~]# cp /var/lib/tftpboot/usr/share/syslinux/{pxelinux.0 vesamenu.c32}  /var/lib/tftpboot/pxelinux/
+~]# cp /mnt/RHEL-7/7.4/images/pxeboot/{vmlinuz,initrd.img} /var/lib/tftpboot/pxelinux/
+~]# cp /var/lib/tftpboot/usr/share/syslinux/{pxelinux.0,vesamenu.c32}  /var/lib/tftpboot/pxelinux/
 ```
 
 ### *Preparation for UEFI*
@@ -94,7 +94,7 @@ EOF
 *You cannot use pxelinux to boot UEFI and replace it with grubx64.efi*.
 
 ```nohighlight
-~]# mv /mnt/RHEL-7/7.4/EFI/BOOT/grubx64.efi /var/lib/tftpboot/
+~]# cp /mnt/RHEL-7/7.4/EFI/BOOT/grubx64.efi /var/lib/tftpboot/
 ~]# cat >> /var/lib/tftpboot/grub.cfg << EOF
 set timeout=9
 menuentry 'Install Red Hat Enterprise Linux 7.4' {
