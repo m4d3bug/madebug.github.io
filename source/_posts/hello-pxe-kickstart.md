@@ -225,7 +225,7 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service t
 
 ## *Configure Kickstart Config*
 
-### *Create your ks dir*
+### *Create your ks dirctory*
 
 ```nohighlight
 ~]# mkdir /var/www/html/ks
@@ -234,7 +234,6 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service t
 ### *Custom your ks.cfg for BIOS*
 
 ```nohighlight
-
 ~]# cat >> /var/www/html/ks/bios-ks.cfg << EOF
 #platform=x86, AMD64, or Intel EM64T
 #version=DEVEL
