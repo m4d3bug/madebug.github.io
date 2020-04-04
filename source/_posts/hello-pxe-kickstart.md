@@ -202,7 +202,7 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service t
 > Host: 192.168.188.174
 > Accept: */*
 >
-< HTTP/1.1 200 OK               <================ MAKE SURE WORKING.
+< HTTP/1.1 200 OK               <================ MAKE SURE WORKING as 200 or 301
 < Date: Thu, 02 Apr 2020 07:29:58 GMT
 < Server: Apache/2.4.6 (Red Hat Enterprise Linux)
 < Content-Length: 3294
