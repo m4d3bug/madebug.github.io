@@ -36,11 +36,11 @@ Removed symlink /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service.
 
 ### *Stop Virtual Network Editor's DHCP services*
 
-![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20191012215006.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012215006.png?raw=true)
 
 ### *Configure custom ip*
 
-![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20191012215142.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012215142.png?raw=true)
 
 ## *Configure PXE Server*
 
@@ -171,9 +171,9 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/dhcpd.service t
 
 *Try to start the machine on the same LAN for a test, you can view its DHCP request in the log.*
 
-![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20191012215745.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012215745.png?raw=true)
 
-![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20191012215234.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012215234.png?raw=true)
 
 ## *Configure Network Installation source*
 
@@ -219,9 +219,9 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service t
 
 *Create a vm machines in the same LAN without iso.*
 
-![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20191012215904.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012215904.png?raw=true)
 
-![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20191012215957.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012215957.png?raw=true)
 
 ## *Configure Kickstart Config*
 
