@@ -77,7 +77,7 @@ INFO  Start blogging with Hexo!
 
 *Please fill up your repository name such as: [ custom name ]+gitlab.io.*
 
-![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20200410191701.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20200410191701.png?raw=true)
 
 ### *Create the local repository*
 
@@ -120,17 +120,17 @@ ssh-rsa AAAAB3NzaC1y.../iiF@@@@@@@@@@@@@@@@@@@@@== m4d3bug@ubuntu
 
 ### *Upload the public key*
 
-![](https://img.madebug.net/m4d3bug/images-of-website/blob/master/blog/20200410192701.png?raw=true)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20200410192701.png?raw=true)
 
 ### *Update the policy of yourself*
 
-![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/9NeG8lWjYHadt4b.jpg)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/9NeG8lWjYHadt4b.jpg?raw=true)
 
 ####  *Delete origin rule and setup like this.*
 
-![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master//blog/jL7n1h3KBOywvZg.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master//blog/jL7n1h3KBOywvZg.png?raw=true)
 
-![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/UGSMXCbTFYlA1yh.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/UGSMXCbTFYlA1yh.png?raw=true)
 
 ## *Start up the first commit*
 
@@ -147,7 +147,7 @@ Switched to a new branch 'beta'
 
 *Now you can see that the remote repository has created a new branch called beta and includes the above files.*
 
-![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/OvHGo1j3MutW7rR.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/OvHGo1j3MutW7rR.png?raw=true)
 
 ## *Configure the pipeline*
 
@@ -203,29 +203,29 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 ### *Confirm the pipelines is working*
 
-![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/U9xHfalLTC3WpA1.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/U9xHfalLTC3WpA1.png?raw=true)
 
 *After that, you can get the assigned domain name in Settings >> Pages .*
 
-![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012224018.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012224018.png?raw=true)
 
 ## *Custom my own domain*
 
 ### *GitLab generates domain verification text*
 
-![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012213613.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012213613.png?raw=true)
 
-![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012213701.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012213701.png?raw=true)
 
 ### *Domain name resolution is set by cloudflare*
 
-![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012213810.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012213810.png?raw=true)
 
 ### *Make sure the https working on custom domain*
 
-![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012213854.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012213854.png?raw=true)
 
-![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012213928.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012213928.png?raw=true)
 
 
 
