@@ -120,7 +120,7 @@ ssh-rsa AAAAB3NzaC1y.../iiF@@@@@@@@@@@@@@@@@@@@@== m4d3bug@ubuntu
 
 ### *Upload the public key*
 
-![](https://github.com/m4d3bug/images-of-website/blob/master/blog/grnETp16mayWYlw.png?raw=true)
+![](https://img.madebug.net/m4d3bug/images-of-website/blob/master/blog/20200410192701.png?raw=true)
 
 ### *Update the policy of yourself*
 
