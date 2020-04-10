@@ -77,7 +77,7 @@ INFO  Start blogging with Hexo!
 
 *Please fill up your repository name such as: [ custom name ]+gitlab.io.*
 
-![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/ugAZDkTQHYIOCKV.png)
+![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20200410191701.png)
 
 ### *Create the local repository*
 
