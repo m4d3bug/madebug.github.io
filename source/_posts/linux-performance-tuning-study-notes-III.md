@@ -50,7 +50,7 @@ CPU上下文涉及的硬件有以下：
   
   <center><font size="5"><B>進程特權模式切換：內核態⇌用戶態</B></font></center>
 
-![](https://i.loli.net/2019/09/05/7JGjSOnUPx5X4AK.png)
+![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20200411113307.png?raw=true)
 
 #### *3 steps for Privilege Mode Switch(System Call):*
 
@@ -60,13 +60,11 @@ CPU上下文涉及的硬件有以下：
 2. *update to next state.* 切換下一進程態。
 3. *run the task in the new state.* 加載目標進程態。
 
-![](https://i.loli.net/2019/09/10/JdNrOBtzgVLsTPK.png)
+![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20200411113347.png?raw=true)
 
 #### *5 steps for Process Context Switch:*
 
 五步切換進程上下文：
-
-
 
 1. *save the virtual memory and stack.* 保存虛擬內存、棧。
 

@@ -96,21 +96,21 @@ isolinux]# system-config-kickstart
 
 ### *Custom your ks.cfg*
 
-![](https://i.loli.net/2019/08/18/NiJG2l7BSgHyvWe.png)
+![20200410232991](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20200411000534.png?raw=true)
 
-![](https://i.loli.net/2019/08/22/aSnE7IZXBuiNdPC.jpg)
+![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20200411111553.png?raw=true)
 
-![](https://i.loli.net/2019/08/18/K1WNP4OGlFILhCS.png)
+![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20200411111715.png?raw=ture)
 
-![](https://i.loli.net/2019/08/18/GFX76hIsiwB9AzO.png)
+![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20200411111830.png?raw=ture)
 
-![](https://i.loli.net/2019/08/18/VcaJwYrvNjkhDOF.png)
+![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20200411112004.png?raw=ture)
 
-![](https://i.loli.net/2019/08/20/YzJ91PCfjvQFKs2.jpg)
+![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20200411112101.png?raw=true)
 
-![](https://i.loli.net/2019/08/18/KCMOzcEbmnIoT9t.png)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20200411112154.png?raw=true)
 
-![](https://i.loli.net/2019/08/20/mXZ4EavRCtbV6F9.jpg)
+![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20200411112240.png?true)
 
 ### *Configure packages I need*
 
@@ -190,7 +190,7 @@ It is OK to use this media.
 
 ### *Verification results*
 
-![](https://i.loli.net/2019/08/24/QvB4SdpCb9Y6D1c.png)
+![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20200411112502.png?true)
 
 ## *Done*
 
