@@ -72,7 +72,7 @@ label linux
   menu label ^Install system
   menu default
   kernel vmlinuz
-  append initrd=initrd.img ip=dhcp inst.repo=http://192.168.188.174/RHEL-7/7.4/Server/x86_64/ inst.ks=http://192.168.188.174/ks/bios-ks.cfg
+  append initrd=initrd.img ip=dhcp inst.repo=http://192.168.188.174/RHEL-7/7.4/Server/x86_64 inst.ks=http://192.168.188.174/ks/bios-ks.cfg
 label vesa
   menu label Install system with ^basic video driver
   kernel vmlinuz
