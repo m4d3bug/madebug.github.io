@@ -263,7 +263,7 @@ reboot
 # System timezone
 timezone Africa/Abidjan
 # Use network installation
-url --url="http://172.16.238.1/RHEL-7/7.7/Server/x86_64"
+url --url="http://192.168.188.174/RHEL-7/7.7/Server/x86_64"
 # System bootloader configuration
 bootloader --location=mbr --boot-drive=sda
 # Clear the Master Boot Record
