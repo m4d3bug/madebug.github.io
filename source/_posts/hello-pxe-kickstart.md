@@ -76,7 +76,7 @@ label linux
 label vesa
   menu label Install system with ^basic video driver
   kernel vmlinuz
-  append initrd=initrd.img ip=dhcp inst.xdriver=vesa nomodeset inst.repo=http://192.168.188.174/RHEL-7/7.x/Server/x86_64/os/
+  append initrd=initrd.img ip=dhcp inst.xdriver=vesa nomodeset inst.repo=http://192.168.188.174/RHEL-7/7.x/Server/x86_64/os
 label rescue
   menu label ^Rescue installed system
   kernel vmlinuz
