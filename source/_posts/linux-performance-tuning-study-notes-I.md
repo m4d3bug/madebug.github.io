@@ -8,8 +8,8 @@ categories:
 - "Ops "
 tags:
 - "Linux "
-- "Performance tuning "
-- "Performance analysis "
+- "Performance Tuning "
+- "Performance Analysis "
 photo:
 ---
 
@@ -26,23 +26,18 @@ photo:
 
 
 <center><font size="5"><B>↓<i>From application side(throughput, delay...)</i>↓</B></font></center>
-
-
-![](https://i.loli.net/2019/09/01/wRrC6fNJWbMFgQd.png)
+![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20200411112804.png?raw=true)
 
 
 
 <center><font size="5"><B>↑<i>From system side(CPU, memory...)</i>↑</B></font></center>
-
-
-
 ## *Linux performance tools*
 
-![](https://i.loli.net/2019/09/01/9UxpGEs4hHkValJ.png)
+![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20200411112954.png?raw=true)
 
 ## *Mind mapping of linux tuning*
 
-![](https://i.loli.net/2019/09/01/WLM1DYxAJuFkZVE.png)
+![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20200411113050.png?raw=true)
 
 ## *Done*
 
