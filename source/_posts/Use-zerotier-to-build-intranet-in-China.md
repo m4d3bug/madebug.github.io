@@ -10,7 +10,6 @@ tags:
 - "Linux "
 - "Network "
 - "Zerotier "
-photo:
 ---
 
 # 使用Zerotier基於國内網絡組建虛擬局域網
