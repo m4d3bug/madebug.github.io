@@ -36,11 +36,11 @@ Removed symlink /etc/systemd/system/dbus-org.fedoraproject.FirewallD1.service.
 
 ### *Stop Virtual Network Editor's DHCP services*
 
-![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20191012215006.png?true)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012215006.png?true)
 
 ### *Configure custom ip*
 
-![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20191012215142.png?true)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012215142.png?true)
 
 ## *Configure PXE Server*
 
@@ -171,9 +171,9 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/dhcpd.service t
 
 *Try to start the machine on the same LAN for a test, you can view its DHCP request in the log.*
 
-![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20191012215745.png?true)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012215745.png?true)
 
-![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20191012215234.png?true)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012215234.png?true)
 
 ## *Configure Network Installation source*
 
@@ -219,9 +219,9 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/httpd.service t
 
 *Create a vm machines in the same LAN without iso.*
 
-![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20191012215904.png?true)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012215904.png?true)
 
-![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20191012215957.png?raw=true)
+![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20191012215957.png?raw=true)
 
 ## *Configure Kickstart Config*
 
@@ -263,7 +263,7 @@ reboot
 # System timezone
 timezone Africa/Abidjan
 # Use network installation
-url --url="http://192.168.188.174/RHEL-7/7.7/Server/x86_64"
+url --url="http://192.168.188.174/RHEL-7/7.4/Server/x86_64"
 # System bootloader configuration
 bootloader --location=mbr --boot-drive=sda
 # Clear the Master Boot Record
@@ -341,7 +341,7 @@ reboot
 # System timezone
 timezone Africa/Abidjan
 # Use network installation
-url --url="http://172.16.238.1/RHEL-7/7.7/Server/x86_64"
+url --url="http://192.168.188.174/RHEL-7/7.4/Server/x86_64"
 # System bootloader configuration
 bootloader --append=" crashkernel=auto" --location=mbr --boot-drive=sda
 # Clear the Master Boot Record

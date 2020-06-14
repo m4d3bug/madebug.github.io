@@ -108,7 +108,7 @@ isolinux]# system-config-kickstart
 
 ![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20200411112101.png?raw=true)
 
-![](https://raw.githubusercontent.com/m4d3bug/images-of-website/master/blog/20200411112154.png?raw=true)
+![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20200411112154.png?raw=true)
 
 ![](https://img.madebug.net/m4d3bug/images-of-website/master/blog/20200411112240.png?true)
 
