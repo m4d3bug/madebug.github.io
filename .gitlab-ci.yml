@@ -16,6 +16,7 @@ pages:
         - hexo clean
         - hexo generate
         - cp googlee610803bb13e8a6c.html public
+        - hexo deploy
     artifacts:
         paths:
             - public
